@@ -1,0 +1,8 @@
+mutation AddTodo($todo: AddTodoInput) {
+  addTodo(input: $todo) {
+    todo {
+      task
+      id
+    }
+  }
+}

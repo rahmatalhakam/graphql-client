@@ -1,0 +1,10 @@
+mutation DeleteTodo($id: Int!) {
+  deleteTodo(id: $id) {
+    todo {
+      id
+      task
+      completed
+      created_At
+    }
+  }
+}

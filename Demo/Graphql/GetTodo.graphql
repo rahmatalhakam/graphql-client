@@ -1,0 +1,8 @@
+query GetTodoById($id: Int!) {
+  todoById(id: $id) {
+    id
+    task
+    completed
+    created_At
+  }
+}

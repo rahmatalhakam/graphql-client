@@ -1,0 +1,8 @@
+mutation updateTodo($id: Int!, $input: AddTodoInput) {
+  updateTodo(id: $id, input: $input) {
+    todo {
+      task
+      id
+    }
+  }
+}

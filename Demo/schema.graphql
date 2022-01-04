@@ -1,0 +1,34 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  todos: [Todo]
+  todoById(id: Int!): [Todo]
+}
+
+type Mutation {
+  addTodo(input: AddTodoInput): AddTodoPayload
+  updateTodo(id: Int! input: AddTodoInput): AddTodoPayload
+  deleteTodo(id: Int!): AddTodoPayload
+}
+
+type AddTodoPayload {
+  todo: Todo
+}
+
+type Todo {
+  id: Int!
+  task: String
+  completed: Boolean!
+  created_At: DateTime
+}
+
+input AddTodoInput {
+  task: String
+  completed: Boolean!
+}
+
+"The `DateTime` scalar represents an ISO-8601 compliant date time type."
+scalar DateTime
